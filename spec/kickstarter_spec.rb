@@ -1,3 +1,5 @@
+require 'pry'
+
 describe 'Backer - ::new' do
   it 'takes a name on initialization, accessible through an attribute reader' do
     backer = Backer.new("Avi")
@@ -54,6 +56,8 @@ describe 'Backer - More Advanced #back_project' do
     logan = Backer.new("Logan")
     hoverboard = Project.new("Awesome Hoverboard")
     logan.back_project(hoverboard)
+    # binding.pry
+    
 
     # If by this point, the project knows about a new backer, where does that mean
     # some more magic needs to happen? There's really only one place it can happen.
